@@ -9,14 +9,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Swift
-        uses: apple/setup-swift@v2
-        with:
-          swift-version: '5.7' # Use the Swift version compatible with your project
 
-      # Install CocoaPods dependencies (if needed)
-      - run: pod install
-        working-directory: ios
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
